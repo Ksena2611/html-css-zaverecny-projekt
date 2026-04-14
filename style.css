@@ -22,6 +22,7 @@ html { box-sizing: border-box; }
 /* =========================
    ZÁKLADNÍ STYLY
 ========================= */
+
 body {
   margin: 0;
   font-family: "DM Sans", sans-serif;
@@ -41,40 +42,27 @@ h1 {
   line-height: 1;
 }
 
-/* tablet */
 @media (min-width: 768px) {
-  h1 {
-    font-size: 4rem;
-  }
+  h1 { font-size: 4rem; }
 }
 
-/* desktop */
 @media (min-width: 1100px) {
-  h1 {
-    font-size: 5rem;
-  }
+  h1 { font-size: 5rem; }
 }
-
 
 h2 {
   font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.2;
-  font-size: 2.5rem;
 }
 
-/* tablet */
 @media (min-width: 768px) {
-  h2 {
-    font-size: 3rem;
-  }
+  h2 { font-size: 3rem; }
 }
 
-/* desktop */
-@media (min-width: 1200px) {
-  h2 {
-    font-size: 3.5rem;
-  }
+@media (min-width: 1100px) {
+  h2 { font-size: 3.5rem; }
 }
 
 h3 {
@@ -93,7 +81,6 @@ footer {
   padding: 50px 0;
 }
 
-/* tablet a víc */
 @media (min-width: 768px) {
   section,
   footer {
@@ -105,14 +92,12 @@ footer {
    CONTAINER
 ========================= */
 
-/* container */
 .container {
   max-width: 540px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* tablet a víc */
 @media (min-width: 768px) {
   .container {
     max-width: 1100px;
@@ -122,6 +107,7 @@ footer {
 /* =========================
    TLAČÍTKO
 ========================= */
+
 .button {
   display: inline-block;
   padding: 15px 30px;
@@ -134,20 +120,17 @@ footer {
   transition: background-color 0.2s ease;
 }
 
-/* hover + focus */
 .button:hover,
 .button:focus {
   background-color: var(--color-primary-dark);
 }
 
-/* tablet a víc */
 @media (min-width: 768px) {
   .button {
     padding: 20px 40px;
     font-size: 1.125rem;
   }
 }
-
 
 /* =========================
    HLAVIČKA
@@ -157,7 +140,6 @@ footer {
   padding: 20px 0;
 }
 
-/* layout header */
 .header__content {
   display: flex;
   flex-direction: column;
@@ -165,12 +147,10 @@ footer {
   gap: 15px;
 }
 
-/* logo */
 .logo {
   height: 35px;
 }
 
-/* nav */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -178,7 +158,8 @@ nav {
   gap: 10px;
 }
 
-/* links */   
+
+
 .nav__link {
   display: inline-block;
   padding: 10px 15px;
@@ -195,7 +176,6 @@ nav {
   background-color: var(--color-secondary-bright);
 }
 
-/* tablet */
 @media (min-width: 768px) {
   .header__content {
     flex-direction: row;
@@ -208,8 +188,7 @@ nav {
   }
 }
 
-/* desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .nav__link {
     padding: 15px 30px;
   }
@@ -222,31 +201,29 @@ nav {
 /* =========================
    HERO
 ========================= */
+
 .hero {
   background-image: url("images/hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   padding: 100px 0;
+  
 }
 
-/* centr contentu */
+
 .hero .container {
   text-align: center;
 }
 
-/* spacing between elements */
 .hero h1 {
   margin-bottom: 30px;
 }
 
 .hero p {
   margin-bottom: 30px;
-  font-size: 1.125rem;
 }
 
-/* tablet */
 @media (min-width: 768px) {
   .hero {
     padding: 120px 0;
@@ -257,8 +234,7 @@ nav {
   }
 }
 
-/* desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .hero {
     padding: 150px 0;
   }
@@ -268,26 +244,29 @@ nav {
    MENU
 ========================= */
 
-.menu h2 {
-  margin-bottom: 40px; /* mezera mezi nadpisem a kartami */
+.menu .container {
+  text-align: center;
+   
 }
- .menu .container {
-  text-align: center; 
-} 
 
-/* seznam karet */
+.menu h2 {
+  margin: 0 0 40px 0;
+}
+
 .menu__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
+    
 }
 
-/* karta */
+
 .menu__item {
   padding: 30px 20px;
-  text-align: center;
   border: 1px solid var(--color-secondary-bright);
   border-radius: var(--radius);
+  text-align: center;
+  flex-grow: 1;
 
   display: flex;
   flex-direction: column;
@@ -295,23 +274,20 @@ nav {
   gap: 20px;
 }
 
-/* ikona */
 .menu__item img {
   width: 40px;
   height: 40px;
-  /* margin: 0 auto; */
 }
 
-/* nadpis v kartě */
 .menu__item h3 {
-  color: var(--color-secondary);
   margin: 0;
+  color: var(--color-secondary);
 }
+
 .menu__item p {
   margin: 0;
 }
 
-/* odkaz */
 .menu__item a {
   color: var(--color-primary);
   text-decoration: none;
@@ -322,7 +298,6 @@ nav {
   text-decoration: underline;
 }
 
-/* TABLET */
 @media (min-width: 768px) {
   .menu__list {
     flex-direction: row;
@@ -334,17 +309,16 @@ nav {
   }
 }
 
-/* DESKTOP */
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .menu__list {
     flex-wrap: nowrap;
+    justify-content: space-between;
   }
 
   .menu__item {
     width: calc((100% - 90px) / 4);
   }
 }
-
 
 /* =========================
    ROZVOZ
@@ -354,27 +328,18 @@ nav {
   background-color: var(--color-section-bg);
 }
 
-/* mobilní layout – prvky pod sebou */
 .delivery__columns {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-/* obrázek */
-.delivery picture {
-  display: block;
-}
-
 .delivery picture img {
   width: 100%;
   height: auto;
-  max-height: 420px; /* omezení výšky obrázku */
-  object-fit: cover;
   border-radius: var(--radius);
 }
 
-/* seznam */
 .delivery ul {
   list-style: none;
   padding: 0;
@@ -385,24 +350,21 @@ nav {
   gap: 20px;
 }
 
-/* jedna položka v seznamu */
 .delivery li {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--color-secondary-dark);
 }
 
-/* ikony */
 .delivery li img {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
 }
 
-/* mezery mezi nadpisem a textem */
 .delivery h2 {
   margin-bottom: 40px;
 }
@@ -411,73 +373,47 @@ nav {
   margin-bottom: 20px;
 }
 
-/* tablet + desktop layout */
 @media (min-width: 768px) {
   .delivery__columns {
     flex-direction: row;
     gap: 60px;
-    align-items: stretch;
   }
 
   .delivery__columns > * {
     flex: 1;
   }
 
-  /* obrázek lehce menší než text */
-  .delivery__columns picture {
-    flex: 0.9;
-  }
-
-  .delivery__columns > div:last-child {
-    flex: 1.1;
-  }
-
-  /* vyplnění výšky na větších obrazovkách */
   .delivery picture img {
     height: 100%;
-    max-height: none;
     object-fit: cover;
   }
 }
 
-
 /* =========================
    PATIČKA
 ========================= */
-
 
 .footer {
   background-color: var(--color-footer-bg);
   color: var(--color-secondary-light);
 }
 
-/* rozložení patičky */
 .footer__content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
-/* logo */
 .footer img {
   height: 40px;
   margin-bottom: 10px;
 }
 
-/* odkazy */
 .footer a {
   color: var(--color-secondary-bright);
   text-decoration: none;
 }
 
-/* PRAVÝ SLOUPEC */
-.footer__content > div:last-child {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* menu */
 .footer ul {
   list-style: none;
   padding: 0;
@@ -488,40 +424,32 @@ nav {
   flex-wrap: wrap;
 }
 
-/* podtržení každého odkazu */
 .footer ul li a {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-/* copyright */
 .footer p {
   margin: 0;
 }
 
-/* TABLET + DESKTOP */
+.footer__content > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 @media (min-width: 768px) {
   .footer__content {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .footer__content > div:last-child {
     align-items: flex-start;
   }
 
-  /* pravý sloupec zarovnaný doprava */
-  .footer__content > div:last-child {
-    align-items: flex-end;
-    text-align: left;
-  }
-
-  /* menu a text zarovnané na stejnou levou hranu */
-  .footer__content > div:last-child ul,
-  .footer__content > div:last-child p {
-    width: 100%;
-  }
-
-  /* menu v jednom řádku */
   .footer ul {
-    justify-content: flex-start;
     flex-wrap: nowrap;
   }
 }
